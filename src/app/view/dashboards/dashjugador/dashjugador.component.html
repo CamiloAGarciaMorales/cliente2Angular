@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="container">
+
+  <h3>Lista de Jugadores</h3>
+
+  <button type="button" class="btn btn-dark" (click)="irNewJugador()">Crear Jugador</button>
+  &nbsp;
+  <button type="button" class="btn btn-dark" (click)="listarTodo()">Listar todo</button>
+  <button type="button" class="btn btn-dark" (click)="buscarUnJugador()">Buscar</button>
+  &nbsp;
+  <br>
+  <input type="text" class="form-control" placeholder="id del jugador" id="idInput">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">cuenta</th>
+        <th scope="col">contraseña</th>
+        <th scope="col">apodo</th>
+        <th scope="col">email</th>
+        <th scope="col">EstadoReg</th>
+        <th scope="col">FechaModificacion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let jugador of jugadorestabla" (click)= "irUpJugador(jugador.id)">
+        <th scope="row">{{ jugador.id}}</th>
+        <td>{{ jugador.cuenta}}</td>
+        <td>{{ jugador.apodo}}</td>
+        <td>{{ jugador.contrasena}}</td>
+        <td>{{ jugador.email}}</td>
+        <td>{{ jugador.estaReg}}1</td>
+        <td>2021-11-08</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  
+  <form id = "formid">
+    <label #labeltitle id="title" ></label>
+    <br>
+    <Label #labelid id="labelid" ></Label>
+    <br>
+    <label #labelcuenta id="labelcuenta" ></label>
+    <br>
+    <label #labelidcontrasena  id="labelcontra" ></label>
+    <br>
+    <label #labelidapodo id="labelapodo"></label>
+    <br>
+    <label #labelidemail id="labelemail" ></label>
+    <br>
+    <label #labelidest id="labelest" ></label><br>
+    <label #labelidfecha id="labelfecha"></label><br>
+  </form>
+</div>

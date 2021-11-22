@@ -1,0 +1,69 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <form [formGroup]="nuevoPerForm" (ngSubmit)= "postForm(nuevoPerForm.value)" >
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Id</label>
+            <input type="text" class="form-control" placeholder="Id del personaje" formControlName = "id">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre del personaje" formControlName = "nombre">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Fuerza</label>
+            <input type="text" class="form-control" placeholder="Fuerza del personaje" formControlName = "fuerza">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Mana</label>
+            <input type="text" class="form-control" placeholder="Mana del personaje" formControlName = "mana">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Energia</label>
+            <input type="text" class="form-control" placeholder="Energia del personaje" formControlName = "energia">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Especie</label>
+            <mat-form-field appearance="fill" >
+                <mat-label></mat-label>
+                <mat-select [(value)]="especie" formControlName = "especie">
+                  <mat-option *ngFor="let especie of especies" [value]="especie"  >
+                    {{especie.nombre}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>       
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Jugador</label>
+            <mat-form-field appearance="fill" >
+                <mat-label></mat-label>
+                <mat-select [(value)]="jugador" formControlName = "jugador">
+                  <mat-option *ngFor="let jugador of jugadores" [value]="jugador" >
+                    {{jugador.apodo}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlInput1">estado</label>
+            <input type="text" class="form-control" placeholder="estado del personaje" formControlName = "estadoRegistro">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Fecha Modificacion</label>
+            <input type="text" class="form-control" placeholder="Fecha del personaje" formControlName = "fechaModificacion">
+        </div>
+    
+        <br><br>
+        <button type="submit" class="btn btn-success">Crear Jugador</button>
+       
+          
+    </form>
+    
+    </div>

@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="container">
+
+  <h3>Lista de Personajes</h3>
+  <br>
+<button type="button" class="btn btn-dark" (click)="irNewPersonaje()">Crear Personaje</button>
+  &nbsp;
+<button type="button" class="btn btn-dark" (click)="listarTodoPersonaje()">Listar todo</button>
+&nbsp;
+<button type="button" class="btn btn-dark" (click)="buscarUnPersonaje()">Buscar</button>
+&nbsp;
+<br>
+<input type="text" class="form-control" placeholder="id del personaje" id="idInput">
+<br>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nombre</th>
+        <th scope="col">fuerza</th>
+        <th scope="col">mana</th>
+        <th scope="col">energia</th>
+        <th scope="col">especieID</th>
+        <th scope="col">jugadorId</th>
+        <th scope="col">EstadoReg</th>
+        <th scope="col">FechaModificacion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let personaje of personajestabla" (click)= "irUppersonaje(personaje.id)">
+        <th scope="row">{{ personaje.id}}</th>
+        <td>{{ personaje.nombre}}</td>
+        <td>{{ personaje.fuerza}}</td>
+        <td>{{ personaje.mana}}</td>
+        <td>{{ personaje.energia}}</td>
+        <td>{{ personaje.especie.id}}</td>
+        <td>{{ personaje.jugador.id}}</td>
+        <td>{{ personaje.estaReg}}1</td>
+        <td>2021-11-08</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form id = "formid">
+    <label #labeltitle id="title" ></label>
+    <br>
+    <Label #labelid id="labelid" ></Label>
+    <br>
+    <label #labelnombre id="labelnombre" ></label>
+    <br>
+    <label #labelidfuer  id="labelfuer" ></label>
+    <br>
+    <label #labelidmana id="labelmana"></label>
+    <br>
+    <label #labelidener id="labelener" ></label>
+    <br>
+    <label #labelidesp id="labelesp" ></label><br>
+    <label #labelidjug id="labeljug" ></label><br>
+    <label #labelidest id="labelest" ></label><br>
+    <label #labelidfecha id="labelfecha"></label><br>
+  </form>
+</div>

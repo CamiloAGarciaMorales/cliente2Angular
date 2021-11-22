@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <form [formGroup]="nuevoJugForm" (ngSubmit)= "postForm(nuevoJugForm.value)" >
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Id</label>
+            <input type="text" class="form-control" placeholder="Id del jugador" formControlName = "id">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Cuenta</label>
+            <input type="text" class="form-control" placeholder="Cuenta del jugador" formControlName = "cuenta">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Contraseña</label>
+            <input type="text" class="form-control" placeholder="Contraseña del jugador" formControlName = "contrasena">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Apodo</label>
+            <input type="text" class="form-control" placeholder="Apodo del jugador" formControlName = "apodo">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email</label>
+            <input type="text" class="form-control" placeholder="Email del jugador" formControlName = "email">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">estado</label>
+            <input type="text" class="form-control" placeholder="Estado del jugador" formControlName = "estadoRegistro">
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Fecha Modificacion</label>
+            <input type="text" class="form-control" placeholder="Fecha del jugador" formControlName = "fechaModificacion">
+        </div>
+    
+        <br><br>
+        <button type="submit" class="btn btn-success">Crear Jugador</button>
+     
+    </form>
+    
+    </div>

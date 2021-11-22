@@ -1,0 +1,63 @@
+<app-header></app-header>
+
+<div class="container">
+
+<form [formGroup]="editarPerForm"  (ngSubmit)= "postForm(editarPerForm.value)">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Nombre</label>
+        <input type="text" class="form-control" placeholder="Nombre del personaje" formControlName = "nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Fuerza</label>
+        <input type="text" class="form-control" placeholder="Fuerza del personaje" formControlName = "fuerza">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Mana</label>
+        <input type="text" class="form-control" placeholder="Mana del personaje" formControlName = "mana">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Energia</label>
+        <input type="text" class="form-control" placeholder="Energia del personaje" formControlName = "energia">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Especie</label>
+        <input type="text" class="form-control" placeholder="Especie del personaje" formControlName = "especie" >
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Jugador</label>
+        <input type="text" class="form-control" placeholder="Jugador del personaje" formControlName = "jugador">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">estado</label>
+        <input type="text" class="form-control" placeholder="estado del personaje" formControlName = "estadoRegistro">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Fecha Modificacion</label>
+        <input type="text" class="form-control" placeholder="Fecha del personaje" formControlName = "fechaModificacion">
+    </div>
+
+    <br><br>
+    <button type="submit" class="btn btn-success">Actualizar Jugador</button>
+    &nbsp;
+    &nbsp;
+    <button type="button" class="btn btn-danger" (click)= "eliminarpersonaje()"   >Eliminar personaje</button>
+  <!----<button type="button" class="btn btn-danger" (click)= "eliminarJugador()"   >Eliminar Jugador</button>--->  
+  
+</form>
+
+
+
+
+
+
+
+
+
+</div>
