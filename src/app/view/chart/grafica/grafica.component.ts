@@ -34,10 +34,10 @@ export class GraficaComponent implements OnInit {
   
   constructor(private api:ApiService, private router:Router) { 
     //Object.assign(this, { this.chartP });
-    this.api.getAllPersonajes().subscribe(data => {this.cantPersonajes = data.length });
-    this.api.getAllEspecies().subscribe(data => {this.cantEspecies = data.length;
+    this.api.getAllPersonajes().subscribe((data: string | any[]) => {this.cantPersonajes = data.length });
+    this.api.getAllEspecies().subscribe((data: string | any[]) => {this.cantEspecies = data.length;
       console.log(this.cantEspecies) });
-      this.api.getAllJugadores().subscribe(data =>{this.cantJugadores= data.length  });
+      this.api.getAllJugadores().subscribe((data: string | any[]) =>{this.cantJugadores= data.length  });
    }
 
   ngOnInit(): void {

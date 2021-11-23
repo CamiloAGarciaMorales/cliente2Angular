@@ -9,7 +9,7 @@ import { DeljugadorComponent } from './view/delete/deljugador/deljugador.compone
 import { DelpersonajeComponent } from './view/delete/delpersonaje/delpersonaje.component';
 import { UpjugadorComponent } from './view/update/upjugador/upjugador.component';
 import { UppersonajeComponent } from './view/update/uppersonaje/uppersonaje.component';
-import { GraficaComponent } from './view/chart/grafica/grafica.component';
+import { GraficaComponent } from "./view/chart/grafica/GraficaComponent";
 
 const routes: Routes = [
     {path:'', redirectTo:'principal', pathMatch:'full'},

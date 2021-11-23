@@ -22,7 +22,7 @@ export class DashjugadorComponent implements OnInit {
 
   listarTodo()
   {
-    this.api.getAllJugadores().subscribe(data => {
+    this.api.getAllJugadores().subscribe((data: listjugadoresI[]) => {
       this.jugadorestabla = data;
       console.log(data);
     })

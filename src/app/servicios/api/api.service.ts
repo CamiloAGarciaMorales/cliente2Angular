@@ -26,7 +26,7 @@ export class ApiService {
     let direccion = this.url + "jugadores"
     return this.http.get<listjugadoresI[]>(direccion);
   }
-
+  
   getAllPersonajes():Observable<listpersonajesI[]>
   {
     let direccion = this.url + "personajes"

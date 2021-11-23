@@ -1,12 +1,13 @@
 <app-header></app-header>
 <div class="container">
+    
 <ngx-charts-pie-chart
 [view]="view"
 
 [results]="chartP"
 [gradient]="gradient"
 [legend]="showLegend"
-
+[legendTitle] = "'Grafica'"
 [labels]="showLabels"
 [doughnut]="isDoughnut"
 (select)="onSelect($event)"
