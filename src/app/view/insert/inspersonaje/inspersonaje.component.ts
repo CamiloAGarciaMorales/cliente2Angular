@@ -58,7 +58,7 @@ export class InspersonajeComponent implements OnInit {
       
      
       this.api.postSinglePersonaje(form).subscribe(data => {
-        this.route.navigate(['dashpersonaje'])
+        this.route.navigate(['dashpersonaje']);
         this.alerta.showSuccess('Se creo el Personaje', 'Nice'); 
       })
     } catch (error) {

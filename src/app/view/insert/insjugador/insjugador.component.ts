@@ -37,7 +37,7 @@ export class InsjugadorComponent implements OnInit {
     try {
       this.api.postSingleJugador(form).subscribe(data => {
         console.log(data)
-        this.route.navigate(['dashjugador']);
+        this.route.navigate(['dashpersonaje']);
         this.alerta.showSuccess('Se creo el jugador', 'Nice'); 
       })
     } catch (error) {
